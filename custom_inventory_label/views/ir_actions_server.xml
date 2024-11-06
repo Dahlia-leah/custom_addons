@@ -1,0 +1,10 @@
+<odoo>
+    <record id="action_print_inventory_label_server" model="ir.actions.server">
+        <field name="name">Print Inventory Label</field>
+        <field name="model_id" ref="stock.model_stock_move"/>
+        <field name="state">code</field>
+        <field name="code">
+            action = env.ref('custom_inventory_label.action_print_inventory_label').run()
+        </field>
+    </record>
+</odoo>
